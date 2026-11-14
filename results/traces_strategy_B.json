@@ -1,0 +1,854 @@
+{
+  "strategy": "B",
+  "summary": {
+    "dev": {
+      "total_questions": 15,
+      "hit_at_1_count": 10,
+      "hit_at_1_ratio": "10/15",
+      "hit_at_1_pct": 66.7,
+      "hit_at_3_count": 13,
+      "hit_at_3_ratio": "13/15",
+      "hit_at_3_pct": 86.7,
+      "filter_compliant_count": 1,
+      "filter_total": 3,
+      "filter_ratio": "1/3"
+    },
+    "test": {
+      "total_questions": 5,
+      "hit_at_1_count": 4,
+      "hit_at_1_ratio": "4/5",
+      "hit_at_1_pct": 80.0,
+      "hit_at_3_count": 5,
+      "hit_at_3_ratio": "5/5",
+      "hit_at_3_pct": 100.0,
+      "filter_compliant_count": 0,
+      "filter_total": 1,
+      "filter_ratio": "0/1"
+    },
+    "overall": {
+      "total_questions": 20,
+      "hit_at_1_count": 14,
+      "hit_at_1_ratio": "14/20",
+      "hit_at_1_pct": 70.0,
+      "hit_at_3_count": 18,
+      "hit_at_3_ratio": "18/20",
+      "hit_at_3_pct": 90.0,
+      "filter_compliant_count": 1,
+      "filter_total": 4,
+      "filter_ratio": "1/4"
+    },
+    "ingest_time_seconds": 5.07,
+    "chunk_count": 115,
+    "cost_usd": 0.0
+  },
+  "traces": [
+    {
+      "question_id": "q01",
+      "split": "dev",
+      "question": "What is the total area of VinUniversity campus?",
+      "gold_page": 5,
+      "evidence_quote": "The campus is located in Vinhomes Ocean Park in the Gia Lam District, Hanoi, Vietnam, with a total area of 420 hectares.",
+      "filter": null,
+      "hit_at_1": 0,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p23_para_0",
+          "page": 23,
+          "section": "arrival_settling_in",
+          "score": 0.5754,
+          "is_gold_hit": false,
+          "text_snippet": "OFF-CAMPUS HOUSING Beyond the first-year dorms, VinUni supports off-campus accommodation at Vinhomes Ocean Park, just a ..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p5_para_0",
+          "page": 5,
+          "section": "campus_overview",
+          "score": 0.5551,
+          "is_gold_hit": true,
+          "text_snippet": "The campus is located in Vinhomes Ocean Park in the Gia Lam District, Hanoi, Vietnam, with a total area of 420 hectares...."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p3_para_0",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.5161,
+          "is_gold_hit": false,
+          "text_snippet": "VinUniversity is a private, not-for-profit university established by Vingroup – the largest private conglomerate in Viet..."
+        }
+      ]
+    },
+    {
+      "question_id": "q02",
+      "split": "dev",
+      "question": "Who is the contact person for international student administration at VinUniversity?",
+      "gold_page": 6,
+      "evidence_quote": "Dao Thuc Hanh (hanh.dt@vinuni.edu.vn) Administration International Students",
+      "filter": null,
+      "hit_at_1": 0,
+      "hit_at_3": 0,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p39_para_0",
+          "page": 39,
+          "section": "social_integration",
+          "score": 0.6003,
+          "is_gold_hit": false,
+          "text_snippet": "VISA We are so happy to meet you! VINUNVERSITY INTERNATIONAL STUDENT ASSOCIATION Hello! It’s 37 VISA introduction..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p38_para_0",
+          "page": 38,
+          "section": "social_integration",
+          "score": 0.5955,
+          "is_gold_hit": false,
+          "text_snippet": "STUDENT-LED ORGANIZATIONS The VinUni International Students Association (VISA) is a vibrant hub for cultural exchange, c..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p30_para_0",
+          "page": 30,
+          "section": "academic_support",
+          "score": 0.5953,
+          "is_gold_hit": false,
+          "text_snippet": "The Registrar's Office is dedicated to supporting your success by providing essential services and guidance regarding ac..."
+        }
+      ]
+    },
+    {
+      "question_id": "q03",
+      "split": "dev",
+      "question": "What months make up Spring season in Hanoi according to the handbook?",
+      "gold_page": 10,
+      "evidence_quote": "Spring (February - April) This is widely considered the most pleasant season in Hanoi.",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p10_para_0",
+          "page": 10,
+          "section": "pre_arrival",
+          "score": 0.7362,
+          "is_gold_hit": true,
+          "text_snippet": "4 SEASONS IN HANOI Spring (February - April) This is widely considered the most pleasant season in Hanoi. Expect comfort..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p10_para_1",
+          "page": 10,
+          "section": "pre_arrival",
+          "score": 0.6879,
+          "is_gold_hit": false,
+          "text_snippet": "Autumn (September - November) Autumn brings a gentle shift, with temperatures ranging from 22°C to 28°C. Humidity dips, ..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p47_para_3",
+          "page": 47,
+          "section": "social_integration",
+          "score": 0.4352,
+          "is_gold_hit": false,
+          "text_snippet": "Take a Bus to Bat Trang Pottery Village (~15,000 VND for a local bus ride) MUST TRY DISHES IN VIETNAM Egg Coffee at Gian..."
+        }
+      ]
+    },
+    {
+      "question_id": "q04",
+      "split": "dev",
+      "question": "How much does the Viettel ST70K data package cost and what does it offer?",
+      "gold_page": 16,
+      "evidence_quote": "Viettel ST70K Package: Data: 500 MB per day (15 GB per month) Price: 70,000 VND Validity: 30 days",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p16_para_0",
+          "page": 16,
+          "section": "arrival_settling_in",
+          "score": 0.7228,
+          "is_gold_hit": true,
+          "text_snippet": "Viettel ST70K Package: Data: 500 MB per day (15 GB per month) Price: 70,000 VND Validity: 30 days ST90K Package: Data: 1..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p16_para_1",
+          "page": 16,
+          "section": "arrival_settling_in",
+          "score": 0.4053,
+          "is_gold_hit": false,
+          "text_snippet": "Note: Ensure your SIM is registered; registration requires a passport. Mobifone HD70 Package: Data: 3.8 GB Price: 70,000..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p9_para_1",
+          "page": 9,
+          "section": "pre_arrival",
+          "score": 0.3985,
+          "is_gold_hit": false,
+          "text_snippet": "Pack Light & Buy Locally – Many items are available in Vietnam at reasonable prices. Visa-on-Arrival Fee (135 USD, Subje..."
+        }
+      ]
+    },
+    {
+      "question_id": "q05",
+      "split": "dev",
+      "question": "Why does VinUniversity provide on-campus accommodation for all students?",
+      "gold_page": 21,
+      "evidence_quote": "VinUniversity provides on-campus accommodation for all students as part of its co-living and co-learning",
+      "filter": {
+        "section": "arrival_settling_in"
+      },
+      "hit_at_1": 0,
+      "hit_at_3": 1,
+      "filter_compliant": false,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p23_para_0",
+          "page": 23,
+          "section": "arrival_settling_in",
+          "score": 0.6773,
+          "is_gold_hit": false,
+          "text_snippet": "OFF-CAMPUS HOUSING Beyond the first-year dorms, VinUni supports off-campus accommodation at Vinhomes Ocean Park, just a ..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p21_para_0",
+          "page": 21,
+          "section": "arrival_settling_in",
+          "score": 0.6416,
+          "is_gold_hit": true,
+          "text_snippet": "DORMITORY REGISTRATION GUIDE VinUniversity provides on-campus accommodation for all students as part of its co-living an..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p3_para_1",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.6253,
+          "is_gold_hit": false,
+          "text_snippet": "Our international students are not just part of the VinUniversity family, they are ambassadors of their cultures and ess..."
+        }
+      ]
+    },
+    {
+      "question_id": "q06",
+      "split": "dev",
+      "question": "What are the two food courts located on the VinUniversity campus?",
+      "gold_page": 24,
+      "evidence_quote": "Our campus features two amazing food courts: Foodology The Little Kitchen",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p24_para_0",
+          "page": 24,
+          "section": "arrival_settling_in",
+          "score": 0.6268,
+          "is_gold_hit": true,
+          "text_snippet": "DINING OPTIONS Our campus features two amazing food courts: Foodology The Little Kitchen These dedicated spaces provide ..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p25_para_0",
+          "page": 25,
+          "section": "arrival_settling_in",
+          "score": 0.5037,
+          "is_gold_hit": false,
+          "text_snippet": "CONVENIENCE STORES Nearby Convenience Stores & Grocery Options For quick and easy grocery shopping or personal item rest..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p26_para_2",
+          "page": 26,
+          "section": "arrival_settling_in",
+          "score": 0.4991,
+          "is_gold_hit": false,
+          "text_snippet": "Student Services & Information Center (SSIC) & VinUniversity Store Opened 9AM - 5.30PM Mon-Fri, the SSIC located at 1st ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q07",
+      "split": "dev",
+      "question": "What is the estimated monthly housing expense for students?",
+      "gold_page": 28,
+      "evidence_quote": "Housing ~ 3.500.000 per month",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p28_para_1",
+          "page": 28,
+          "section": "arrival_settling_in",
+          "score": 0.4045,
+          "is_gold_hit": true,
+          "text_snippet": "Expense Amount (VND) 1 Housing ~ 3.500.000 per month 2 Food ~ 5.000.000 per month 3 Health care Health insurance ~ 4.570..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p31_para_1",
+          "page": 31,
+          "section": "academic_support",
+          "score": 0.4033,
+          "is_gold_hit": false,
+          "text_snippet": "Detailed course offerings and descriptions will be available on the student portal. Consult your academic advisor before..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p21_para_2",
+          "page": 21,
+          "section": "arrival_settling_in",
+          "score": 0.3909,
+          "is_gold_hit": false,
+          "text_snippet": "Dormitory Assignment & Confirmation The Student Housing Office will review applications and assign accommodations based ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q08",
+      "split": "dev",
+      "question": "What type of academic system does VinUniversity follow?",
+      "gold_page": 32,
+      "evidence_quote": "VinUniversity follows a semester-based system with clear term start and end dates.",
+      "filter": null,
+      "hit_at_1": 0,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p3_para_0",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.589,
+          "is_gold_hit": false,
+          "text_snippet": "VinUniversity is a private, not-for-profit university established by Vingroup – the largest private conglomerate in Viet..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p32_para_0",
+          "page": 32,
+          "section": "academic_support",
+          "score": 0.5678,
+          "is_gold_hit": true,
+          "text_snippet": "VinUniversity follows a semester-based system with clear term start and end dates. Credit Requirements Each program has ..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p31_para_0",
+          "page": 31,
+          "section": "academic_support",
+          "score": 0.5577,
+          "is_gold_hit": false,
+          "text_snippet": "ACADEMIC & REGISTRAR-RELATED INFORMATION VinUniversity provides students with a seamless and well-structured course regi..."
+        }
+      ]
+    },
+    {
+      "question_id": "q09",
+      "split": "dev",
+      "question": "What is the minimum overall IELTS band score required for English proficiency?",
+      "gold_page": 33,
+      "evidence_quote": "Minimum overall band score of 6.5, with no section below 6.0",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p33_para_0",
+          "page": 33,
+          "section": "academic_support",
+          "score": 0.5669,
+          "is_gold_hit": true,
+          "text_snippet": "Accepted tests: C1 Advanced (formerly known as CAE) or C2 Proficiency (formerly known as CPE) IELTS Academic TOEFL iBT P..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p34_para_2",
+          "page": 34,
+          "section": "academic_support",
+          "score": 0.5353,
+          "is_gold_hit": false,
+          "text_snippet": "Exemptions from English Proficiency Tests Students may be exempted from the English proficiency requirement if they: Com..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p34_para_1",
+          "page": 34,
+          "section": "academic_support",
+          "score": 0.5283,
+          "is_gold_hit": false,
+          "text_snippet": "Additional Support ENGLISH PROFICIENCY REQUIREMENT Exemptions from English Proficiency Tests Students may be exempted fr..."
+        }
+      ]
+    },
+    {
+      "question_id": "q10",
+      "split": "dev",
+      "question": "What Learning Management System (LMS) is used by VinUniversity students to access course materials?",
+      "gold_page": 35,
+      "evidence_quote": "Go to the Canvas website: 2. Enter your VinUniversity credentials:",
+      "filter": {
+        "section": "academic_support"
+      },
+      "hit_at_1": 0,
+      "hit_at_3": 0,
+      "filter_compliant": false,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p35_para_1",
+          "page": 35,
+          "section": "academic_support",
+          "score": 0.7483,
+          "is_gold_hit": false,
+          "text_snippet": "GUIDE TO USING THE UINIVERSITY LMS AND SIS PLATFORM Accessing Course Materials on Canvas (LMS) VinUniversity uses Canvas..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p31_para_0",
+          "page": 31,
+          "section": "academic_support",
+          "score": 0.6163,
+          "is_gold_hit": false,
+          "text_snippet": "ACADEMIC & REGISTRAR-RELATED INFORMATION VinUniversity provides students with a seamless and well-structured course regi..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p3_para_0",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.5191,
+          "is_gold_hit": false,
+          "text_snippet": "VinUniversity is a private, not-for-profit university established by Vingroup – the largest private conglomerate in Viet..."
+        }
+      ]
+    },
+    {
+      "question_id": "q11",
+      "split": "dev",
+      "question": "What is the student-led organization representing international students at VinUniversity?",
+      "gold_page": 38,
+      "evidence_quote": "The VinUni International Students Association (VISA) is a vibrant hub for cultural exchange",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p38_para_0",
+          "page": 38,
+          "section": "social_integration",
+          "score": 0.76,
+          "is_gold_hit": true,
+          "text_snippet": "STUDENT-LED ORGANIZATIONS The VinUni International Students Association (VISA) is a vibrant hub for cultural exchange, c..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p3_para_1",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.7116,
+          "is_gold_hit": false,
+          "text_snippet": "Our international students are not just part of the VinUniversity family, they are ambassadors of their cultures and ess..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p26_para_0",
+          "page": 26,
+          "section": "arrival_settling_in",
+          "score": 0.6163,
+          "is_gold_hit": false,
+          "text_snippet": "STUDENT SPACES International support center (ISC): Did you know international students at VinUniversity have their own s..."
+        }
+      ]
+    },
+    {
+      "question_id": "q12",
+      "split": "dev",
+      "question": "What is the annual sports tournament hosted at VinUni where colleges compete against each other?",
+      "gold_page": 42,
+      "evidence_quote": "Green Sports Day is an annual sports competition in VinUni. During this thrilling competition, each college forms its own",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p42_para_0",
+          "page": 42,
+          "section": "social_integration",
+          "score": 0.5997,
+          "is_gold_hit": true,
+          "text_snippet": "Green Sports Day is an annual sports competition in VinUni. During this thrilling competition, each college forms its ow..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p41_para_2",
+          "page": 41,
+          "section": "social_integration",
+          "score": 0.5105,
+          "is_gold_hit": false,
+          "text_snippet": "Beyond the freshman convocation, the formal graduation ceremony stands as a momentous occasion, honoring the incredible ..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p40_para_0",
+          "page": 40,
+          "section": "social_integration",
+          "score": 0.5043,
+          "is_gold_hit": false,
+          "text_snippet": "At VinUni, there’s no shortage of ways to connect, grow, and make your mark! Beyond VISA, VinUni offers a dynamic array ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q13",
+      "split": "dev",
+      "question": "Which instant messaging application is widely used for communication in Vietnam according to the guide?",
+      "gold_page": 43,
+      "evidence_quote": "In Vietnam, the go-to messaging app is Zalo, a Vietnamese instant messaging platform",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p43_para_0",
+          "page": 43,
+          "section": "social_integration",
+          "score": 0.7446,
+          "is_gold_hit": true,
+          "text_snippet": "COMMUNICATION APPS & STAYING CONNECTED In Vietnam, the go-to messaging app is Zalo, a Vietnamese instant messaging platf..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p43_para_1",
+          "page": 43,
+          "section": "social_integration",
+          "score": 0.5095,
+          "is_gold_hit": false,
+          "text_snippet": "However, while WhatsApp is rarely used among locals, it remains a bridge among international students, especially those ..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p17_para_4",
+          "page": 17,
+          "section": "arrival_settling_in",
+          "score": 0.4759,
+          "is_gold_hit": false,
+          "text_snippet": "To ensure a smooth bank transaction for your account, it is recommended to download the designated app from your bank ac..."
+        }
+      ]
+    },
+    {
+      "question_id": "q14",
+      "split": "dev",
+      "question": "How far is Bat Trang Pottery Village from VinUniversity campus?",
+      "gold_page": 46,
+      "evidence_quote": "Bat Trang Pottery Village Distance from VinUniversity: 15 minutes",
+      "filter": {
+        "section": "social_integration"
+      },
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": true,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p46_para_0",
+          "page": 46,
+          "section": "social_integration",
+          "score": 0.6561,
+          "is_gold_hit": true,
+          "text_snippet": "TRADITIONAL VILLAGES & LOCAL CRAFTS Bat Trang Pottery Village Distance from VinUniversity: 15 minutes Known for its cent..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p45_para_2",
+          "page": 45,
+          "section": "social_integration",
+          "score": 0.4832,
+          "is_gold_hit": false,
+          "text_snippet": "From unique shops and vibrant markets to centuries-old houses, the Old Quarter is a must-visit for shopping, sightseeing..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p44_para_1",
+          "page": 44,
+          "section": "social_integration",
+          "score": 0.4479,
+          "is_gold_hit": false,
+          "text_snippet": "Temple of Literature Distance from VinUni: 45 minutes With over 1,000 years of history, this ancient Confucian temple on..."
+        }
+      ]
+    },
+    {
+      "question_id": "q15",
+      "split": "dev",
+      "question": "Who established VinUniversity and what is its non-profit status?",
+      "gold_page": 3,
+      "evidence_quote": "VinUniversity is a private, not-for-profit university established by Vingroup – the largest private conglomerate in Vietnam.",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p3_para_0",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.6689,
+          "is_gold_hit": true,
+          "text_snippet": "VinUniversity is a private, not-for-profit university established by Vingroup – the largest private conglomerate in Viet..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p38_para_0",
+          "page": 38,
+          "section": "social_integration",
+          "score": 0.4832,
+          "is_gold_hit": false,
+          "text_snippet": "STUDENT-LED ORGANIZATIONS The VinUni International Students Association (VISA) is a vibrant hub for cultural exchange, c..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p3_para_2",
+          "page": 3,
+          "section": "campus_overview",
+          "score": 0.475,
+          "is_gold_hit": false,
+          "text_snippet": "This handbook is designed to provide you with the information you need to know to make the most of your time at VinUnive..."
+        }
+      ]
+    },
+    {
+      "question_id": "q16",
+      "split": "test",
+      "question": "Who is the contact person in charge of Dormitory at VinUniversity?",
+      "gold_page": 6,
+      "evidence_quote": "Le Bao Anh (anh.lb@vinuni.edu.vn) Dormitory",
+      "filter": null,
+      "hit_at_1": 0,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p21_para_0",
+          "page": 21,
+          "section": "arrival_settling_in",
+          "score": 0.5738,
+          "is_gold_hit": false,
+          "text_snippet": "DORMITORY REGISTRATION GUIDE VinUniversity provides on-campus accommodation for all students as part of its co-living an..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p52_para_0",
+          "page": 52,
+          "section": "legal_and_emergency",
+          "score": 0.5251,
+          "is_gold_hit": false,
+          "text_snippet": "Student Affairs Management (SAM) Email: connect-sam@vinuni.edu.vn Phone: (+84) 24 71 089 779 (Ext: 9088) Office of Regis..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p6_para_0",
+          "page": 6,
+          "section": "pre_arrival",
+          "score": 0.4911,
+          "is_gold_hit": true,
+          "text_snippet": "Dao Thuc Hanh (hanh.dt@vinuni.edu.vn) Administration International Students Le Bao Anh (anh.lb@vinuni.edu.vn) Dormitory ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q17",
+      "split": "test",
+      "question": "What estimated monthly budget is needed for food expenses according to the student expense summary?",
+      "gold_page": 28,
+      "evidence_quote": "Food ~ 5.000.000 per month",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p28_para_1",
+          "page": 28,
+          "section": "arrival_settling_in",
+          "score": 0.379,
+          "is_gold_hit": true,
+          "text_snippet": "Expense Amount (VND) 1 Housing ~ 3.500.000 per month 2 Food ~ 5.000.000 per month 3 Health care Health insurance ~ 4.570..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p31_para_1",
+          "page": 31,
+          "section": "academic_support",
+          "score": 0.3579,
+          "is_gold_hit": false,
+          "text_snippet": "Detailed course offerings and descriptions will be available on the student portal. Consult your academic advisor before..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p47_para_0",
+          "page": 47,
+          "section": "social_integration",
+          "score": 0.3525,
+          "is_gold_hit": false,
+          "text_snippet": "BUDGET FRIENDLY ADVENTURES Foodie Go on a Street Food Tour (50,000 - 100,000 VND per meal). Try Pho (beef noodle soup), ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q18",
+      "split": "test",
+      "question": "Are international students covered by Vietnam's Social Insurance program for healthcare?",
+      "gold_page": 49,
+      "evidence_quote": "However, since the Social Insurance program in Vietnam does not cover foreign national, you will need to purchase your own health insurance plan",
+      "filter": {
+        "section": "health_and_insurance"
+      },
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": false,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p49_para_0",
+          "page": 49,
+          "section": "health_and_insurance",
+          "score": 0.6664,
+          "is_gold_hit": true,
+          "text_snippet": "At VinUniversity, you can freely access the medical clinic and the psychological counseling service for primary care. Ho..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p28_para_1",
+          "page": 28,
+          "section": "arrival_settling_in",
+          "score": 0.5189,
+          "is_gold_hit": false,
+          "text_snippet": "Expense Amount (VND) 1 Housing ~ 3.500.000 per month 2 Food ~ 5.000.000 per month 3 Health care Health insurance ~ 4.570..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p49_para_1",
+          "page": 49,
+          "section": "health_and_insurance",
+          "score": 0.4917,
+          "is_gold_hit": false,
+          "text_snippet": "We suggest the following insurance companies for their reputation and popularity in Vietnam: PVI Bảo Việt Insurance *You..."
+        }
+      ]
+    },
+    {
+      "question_id": "q19",
+      "split": "test",
+      "question": "What is the official email address for Student Affairs Management (SAM)?",
+      "gold_page": 52,
+      "evidence_quote": "Student Affairs Management (SAM) Email: connect-sam@vinuni.edu.vn",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p52_para_0",
+          "page": 52,
+          "section": "legal_and_emergency",
+          "score": 0.4789,
+          "is_gold_hit": true,
+          "text_snippet": "Student Affairs Management (SAM) Email: connect-sam@vinuni.edu.vn Phone: (+84) 24 71 089 779 (Ext: 9088) Office of Regis..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p52_para_1",
+          "page": 52,
+          "section": "legal_and_emergency",
+          "score": 0.4541,
+          "is_gold_hit": false,
+          "text_snippet": "9901) Vietnam Immigration Department in Hanoi Add: No. 44 - 46 Trần Phú, Ba Đình Phone: (+84) 4 38257941. LIST OF IMPORT..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p51_para_0",
+          "page": 51,
+          "section": "legal_and_emergency",
+          "score": 0.4182,
+          "is_gold_hit": false,
+          "text_snippet": "Visa Guidelines: STUDY VISA GUIDELINES FOR INTERNATIONAL STUDENTS *This guideline applies to all international students ..."
+        }
+      ]
+    },
+    {
+      "question_id": "q20",
+      "split": "test",
+      "question": "What essential documents must students have before traveling regarding visa and admission?",
+      "gold_page": 8,
+      "evidence_quote": "Essential Documents & Finances Passport & Student Visa Letter University Admission Letter & Official Documents",
+      "filter": null,
+      "hit_at_1": 1,
+      "hit_at_3": 1,
+      "filter_compliant": null,
+      "hits": [
+        {
+          "rank": 1,
+          "chunk_id": "vinuni-handbook-2024_p8_para_0",
+          "page": 8,
+          "section": "pre_arrival",
+          "score": 0.7337,
+          "is_gold_hit": true,
+          "text_snippet": "Essential Documents & Finances Passport & Student Visa Letter University Admission Letter & Official Documents Emergency..."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "vinuni-handbook-2024_p12_para_3",
+          "page": 12,
+          "section": "arrival_settling_in",
+          "score": 0.6063,
+          "is_gold_hit": false,
+          "text_snippet": "Submit Required Documents: Visa Approval Letter: Present the original or a printed copy. Passport: Ensure it's valid for..."
+        },
+        {
+          "rank": 3,
+          "chunk_id": "vinuni-handbook-2024_p51_para_0",
+          "page": 51,
+          "section": "legal_and_emergency",
+          "score": 0.5987,
+          "is_gold_hit": false,
+          "text_snippet": "Visa Guidelines: STUDY VISA GUIDELINES FOR INTERNATIONAL STUDENTS *This guideline applies to all international students ..."
+        }
+      ]
+    }
+  ]
+}

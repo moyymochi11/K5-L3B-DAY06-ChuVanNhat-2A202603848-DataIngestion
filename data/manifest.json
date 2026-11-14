@@ -1,0 +1,27 @@
+{
+  "source_id": "vinuni-handbook-2024",
+  "title": "VinUniversity International Student Handbook",
+  "source_path_or_url": "https://vinuni.edu.vn/wp-content/uploads/2025/04/INTERNATIONAL-STUDENT-HANDBOOK.pdf",
+  "license_or_permission": "Public educational student handbook published by VinUniversity for public guidance and orientation.",
+  "accessed_at": "2026-11-14T09:25:00+07:00",
+  "snapshot_version": "2024-2025 Edition",
+  "total_physical_pages": 54,
+  "content_pages_count": 42,
+  "content_page_numbers": [
+    3, 4, 5, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 21, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49, 51, 52
+  ],
+  "excluded_pages": [
+    1, 2, 7, 11, 20, 22, 29, 37, 48, 50, 53, 54
+  ],
+  "exclusion_rationale": "Pages excluded are cover pages, blank separation pages, illustration-only full page graphics, or pages with fewer than 80 characters of substantive textual content.",
+  "total_characters": 37248,
+  "sections": [
+    {"name": "campus_overview", "pages": [3, 4, 5]},
+    {"name": "pre_arrival", "pages": [6, 8, 9, 10]},
+    {"name": "arrival_settling_in", "pages": [12, 13, 14, 15, 16, 17, 18, 19, 21, 23, 24, 25, 26, 27, 28]},
+    {"name": "academic_support", "pages": [30, 31, 32, 33, 34, 35, 36]},
+    {"name": "social_integration", "pages": [38, 39, 40, 41, 42, 43, 44, 45, 46, 47]},
+    {"name": "health_and_insurance", "pages": [49]},
+    {"name": "legal_and_emergency", "pages": [51, 52]}
+  ]
+}

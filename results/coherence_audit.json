@@ -1,0 +1,136 @@
+{
+  "coherence_audit": [
+    {
+      "page": 3,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "VinUniversity is a private, not-for-profit university established by Vingroup \u2013 ",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "VinUniversity is a private, not-for-profit university established by Vingroup \u2013 ",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 5,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "The campus is located in Vinhomes Ocean Park in the Gia Lam District, Hanoi, Vie",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "The campus is located in Vinhomes Ocean Park in the Gia Lam District, Hanoi, Vie",
+        "ends_with_punct": false
+      }
+    },
+    {
+      "page": 6,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "Dao Thuc Hanh (hanh.dt@vinuni.edu.vn) Administration International Students Le B",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Dao Thuc Hanh (hanh.dt@vinuni.edu.vn) Administration International Students Le B",
+        "ends_with_punct": false
+      }
+    },
+    {
+      "page": 8,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "Essential Documents & Finances Passport & Student Visa Letter University Admissi",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Essential Documents & Finances Passport & Student Visa Letter University Admissi",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 9,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "Study & Stationery Supplies Notebooks & Pens Folder for Important Documents Stur",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Study & Stationery Supplies Notebooks & Pens Folder for Important Documents Stur",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 10,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "4 SEASONS IN HANOI Spring (February - April) This is widely considered the most ",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "4 SEASONS IN HANOI Spring (February - April) This is widely considered the most ",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 12,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "Welcome to Hanoi, Vietnam! You have just arrived and now you\u2019re on your way to g",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Welcome to Hanoi, Vietnam! You have just arrived and now you\u2019re on your way to g",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 13,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "Locate Your Carousel: Check the display screens to identify the carousel assigne",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Locate Your Carousel: Check the display screens to identify the carousel assigne",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 14,
+      "strategy_A": {
+        "score": 1,
+        "chunk_text_preview": "TRANSPORTATION FROM AIRPORT TO VINUNIVERSITY There are many modes of transport i",
+        "ends_with_punct": false
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "TRANSPORTATION FROM AIRPORT TO VINUNIVERSITY There are many modes of transport i",
+        "ends_with_punct": true
+      }
+    },
+    {
+      "page": 15,
+      "strategy_A": {
+        "score": 2,
+        "chunk_text_preview": "Morning (06:00 - 12:00) 300,000 VND - 450,000 VND Afternoon (12:00 - 18:00) 350,",
+        "ends_with_punct": true
+      },
+      "strategy_B": {
+        "score": 2,
+        "chunk_text_preview": "Morning (06:00 - 12:00) 300,000 VND - 450,000 VND Afternoon (12:00 - 18:00) 350,",
+        "ends_with_punct": true
+      }
+    }
+  ],
+  "avg_A": 1.1,
+  "avg_B": 2.0
+}

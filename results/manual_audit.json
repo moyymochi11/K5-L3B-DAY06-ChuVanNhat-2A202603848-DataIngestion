@@ -1,0 +1,65 @@
+{
+  "coherence_assessment": {
+    "sample_size": 10,
+    "sample_pages": [3, 5, 6, 8, 9, 10, 12, 13, 14, 15],
+    "scale": "0: cut mid-sentence/incomprehensible, 1: partial context, 2: complete coherent thought",
+    "strategy_A_average": 1.10,
+    "strategy_B_average": 2.00,
+    "strategy_C_average": 2.00,
+    "rationale": "Strategy A splits text rigidly at 500 characters, frequently cutting sentences in half (score 1). Strategy B respects natural sentence and paragraph boundaries, maintaining complete context (score 2)."
+  },
+  "metadata_usefulness": {
+    "test_records_checked": 15,
+    "strategy_A_correct": "15/15",
+    "strategy_B_correct": "15/15",
+    "strategy_C_correct": "15/15",
+    "filter_compliance_test": {
+      "strategy_A": "0/1 (0.0%)",
+      "strategy_B": "0/1 (0.0%)",
+      "strategy_C": "1/1 (100.0%)"
+    },
+    "filter_compliance_overall": {
+      "strategy_A": "2/4 (50.0%)",
+      "strategy_B": "1/4 (25.0%)",
+      "strategy_C": "4/4 (100.0%)"
+    },
+    "rationale": "All chunks correctly trace back to document_id, source PDF, physical page, and section. When queries specify metadata filters, Strategy C enforces 100% compliance, eliminating out-of-domain noise."
+  },
+  "grounding_quality": {
+    "test_set_size": 5,
+    "scale": "0: no evidence, 1: partial evidence, 2: sufficient evidence to answer and cite source",
+    "strategy_A": {
+      "scores_distribution": {"0": 1, "1": 0, "2": 4},
+      "average": 1.60,
+      "details": {
+        "q16": 0,
+        "q17": 2,
+        "q18": 2,
+        "q19": 2,
+        "q20": 2
+      }
+    },
+    "strategy_B": {
+      "scores_distribution": {"0": 0, "1": 0, "2": 5},
+      "average": 2.00,
+      "details": {
+        "q16": 2,
+        "q17": 2,
+        "q18": 2,
+        "q19": 2,
+        "q20": 2
+      }
+    },
+    "strategy_C": {
+      "scores_distribution": {"0": 0, "1": 0, "2": 5},
+      "average": 2.00,
+      "details": {
+        "q16": 2,
+        "q17": 2,
+        "q18": 2,
+        "q19": 2,
+        "q20": 2
+      }
+    }
+  }
+}

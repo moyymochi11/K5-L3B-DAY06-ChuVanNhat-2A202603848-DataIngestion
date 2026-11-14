@@ -1,8 +1,8 @@
 # Thông tin học viên
 
-- Họ và tên:
-- MSSV:
-- Lớp: L3A / L3B / khác:
-- Chủ đề và corpus:
-- Repo bài nộp:
-- Commit chốt bài:
+- Họ và tên: Chu Văn Nhật
+- MSSV: 2A202603848
+- Lớp: L3B
+- Chủ đề và corpus: Sổ tay sinh viên quốc tế VinUniversity (VinUniversity International Student Handbook 2024-2025, 54 trang vật lý, 42 trang nội dung hữu ích)
+- Repo bài nộp: https://github.com/moyymochi11/K5-L3-Day06-2A202603848-DataIngestionEngineering
+- Commit chốt bài: ade322a
