@@ -18,7 +18,14 @@ def main() -> None:
     print("=" * 70)
 
     # 1. Locate files
-    project_root = Path(__file__).resolve().parent.parent.parent
+    current_dir = Path(__file__).resolve().parent
+    if (current_dir.parent / "data").exists():
+        project_root = current_dir.parent
+    elif (current_dir.parent.parent / "data").exists():
+        project_root = current_dir.parent.parent
+    else:
+        project_root = Path.cwd()
+
     pdf_path = project_root / "data" / "vinuni_international_student_handbook.pdf"
     if not pdf_path.exists():
         pdf_path = project_root / "starter" / "data" / "vinuni_international_student_handbook.pdf"

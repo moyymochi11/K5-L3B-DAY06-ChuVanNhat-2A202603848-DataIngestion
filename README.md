@@ -1,47 +1,75 @@
 # Day 06 · Data Ingestion Engineering
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+**Học viên:** Chu Văn Nhật · **MSSV:** 2A202603848 · **Lớp:** L3B  
+**Chủ đề & Corpus:** Sổ tay Sinh viên Quốc tế VinUniversity (*VinUniversity International Student Handbook 2024-2025*, 54 trang vật lý, 42 trang nội dung hữu ích).  
+**Báo cáo cá nhân chi tiết:** [report/individual/2A202603848_ChuVanNhat.md](report/individual/2A202603848_ChuVanNhat.md) (hoặc [report/individual/MSSV_HoTen.md](report/individual/MSSV_HoTen.md)).
 
-Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
+---
 
-| 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
-|---|---|---|
-| Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |
+## 🚀 Hướng dẫn chạy và tái lập (Quickstart & Reproduction)
 
-## Bắt đầu nhanh
+### 1. Cài đặt thư viện
+Dự án sử dụng Python 3.11+, Vector Store bền vững **ChromaDB** và Embedding Model thật **all-MiniLM-L6-v2** (384 chiều, chạy hoàn toàn local qua ONNX Runtime, không cần Docker, chi phí $0.00).
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+```bash
+pip install -r starter/requirements.txt
+```
 
-## 1. Xây pipeline
+### 2. Chạy toàn bộ Pipeline (3 Chiến lược A / B / C & Đánh giá Benchmark)
+Chạy lệnh sau tại thư mục gốc của dự án:
 
-![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
+```bash
+py -m starter.src.run
+# Hoặc: py -m src.run
+```
 
-Chọn tài liệu được phép sử dụng; giữ **ID tài liệu, nguồn, trang/vị trí** và metadata phù hợp. Dùng embedding model thật qua API hoặc chạy local; lưu và truy xuất bằng pgvector, Qdrant, Chroma hoặc một store tương đương.
+Kết quả sẽ tự động được xuất ra:
+* Vết truy xuất chi tiết từng câu: `results/traces_strategy_A.json`, `traces_strategy_B.json`, `traces_strategy_C.json`.
+* Tổng kết benchmark: `results/benchmark_summary.json`.
+* Đánh giá thủ công Coherence & Grounding: `results/manual_audit.json`.
+* Nhật ký thí nghiệm: `artifacts/experiment_log.csv`.
 
-## 2. So sánh và đánh giá
+---
 
-![Ba chiến lược được đánh giá trên cùng corpus và benchmark dev/test](assets/benchmark-workflow.svg)
+## 📊 Bảng tổng kết kết quả 3 Chiến lược
 
-Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **15 câu dev / 5 câu test** trước khi chạy; chọn cấu hình trên dev, rồi đánh giá test sau khi cố định. Mỗi câu hỏi cần có đoạn bằng chứng và trang nguồn; thiết kế bộ câu hỏi và đánh giá theo [BENCHMARK.md](BENCHMARK.md).
+| Tiêu chí | Chiến lược A (Fixed 500) | Chiến lược B (Paragraph) | Chiến lược C (Paragraph + Filter) |
+|---|:---:|:---:|:---:|
+| **Số lượng chunk** | 117 chunks | 115 chunks | 115 chunks |
+| **Thời gian nạp** | 5.54s | 5.13s | 0.13s |
+| **Chi phí** | **$0.00** | **$0.00** | **$0.00** |
+| **Dev Hit@1 / Hit@3** | 9/15 (60.0%) / 14/15 (93.3%) | **10/15 (66.7%)** / 13/15 (86.7%) | **10/15 (66.7%)** / 13/15 (86.7%) |
+| **Test Hit@1 / Hit@3** | 4/5 (80.0%) / 4/5 (80.0%) | 4/5 (80.0%) / **5/5 (100.0%)** | 4/5 (80.0%) / **5/5 (100.0%)** |
+| **Coherence trung bình /2** | 1.10 / 2.0 (bị cắt cụt câu) | **2.00 / 2.0 (trọn vẹn ý)** | **2.00 / 2.0 (trọn vẹn ý)** |
+| **Metadata đúng & đủ (Test)**| 15/15 (100%) | 15/15 (100%) | 15/15 (100%) |
+| **Filter tuân thủ (Test)** | 0/1 (0%) | 0/1 (0%) | **1/1 (100%)** |
+| **Grounding trung bình /2** | 1.60 / 2.0 | **2.00 / 2.0** | **2.00 / 2.0** |
 
-Đánh giá theo năm khía cạnh: **độ chính xác truy xuất**, **tính mạch lạc của chunk**, **tính hữu dụng của metadata**, **chất lượng grounding** và **tác động của chiến lược dữ liệu**. Giải thích lựa chọn bằng kết quả, ví dụ lỗi và các đánh đổi.
+---
 
-## 3. Chuẩn bị bài nộp
+## 📁 Cấu trúc thư mục bài nộp
 
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
-3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
-
-## Tài liệu hướng dẫn
-
-| Bạn cần tìm | Tài liệu |
-|---|---|
-| Setup baseline PostgreSQL + pgvector | [starter/README.md](starter/README.md) |
-| Các bước làm và cách tính chỉ số | [GUIDE.md](GUIDE.md) |
-| Tiến độ trong 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Năm tiêu chí benchmark và bộ câu hỏi | [BENCHMARK.md](BENCHMARK.md) |
-| Tiêu chí chấm điểm | [RUBRIC.md](RUBRIC.md) |
-| Quy tắc sử dụng dữ liệu, AI và API | [RULES.md](RULES.md) |
-| Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
-
-[data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+```text
+├── STUDENT.md                               # Thông tin cá nhân học viên
+├── README.md                                # Hướng dẫn cài đặt, chạy và cấu trúc dự án
+├── data/
+│   ├── manifest.json                        # Khai báo nguồn, quyền, 42 trang nội dung hợp lệ
+│   └── vinuni_international_student_handbook.pdf  # Tài liệu PDF gốc
+├── benchmark/
+│   └── benchmark.json                       # 20 câu hỏi (15 dev / 5 test), gold evidence & filter
+├── artifacts/
+│   └── experiment_log.csv                   # Nhật ký đo đạc thông số và giả thuyết A/B/C
+├── results/
+│   ├── benchmark_summary.json               # Tổng hợp tỷ lệ Hit@1, Hit@3, Filter compliance
+│   ├── manual_audit.json                    # Bảng chấm tay Coherence, Metadata và Grounding
+│   ├── traces_strategy_A.json               # Trace top-3 chi tiết Strategy A
+│   ├── traces_strategy_B.json               # Trace top-3 chi tiết Strategy B
+│   └── traces_strategy_C.json               # Trace top-3 chi tiết Strategy C
+├── report/individual/
+│   ├── 2A202603848_ChuVanNhat.md            # Báo cáo cá nhân hoàn chỉnh theo mẫu
+│   └── MSSV_HoTen.md                        # Bản sao báo cáo cá nhân
+├── src/                                     # Mã nguồn pipeline tại root
+└── starter/                                 # Khung starter gốc và mã nguồn hoàn thiện
+    ├── src/                                 # Ingestion, chunking, embeddings, store, evaluation, run
+    └── requirements.txt                     # Danh sách thư viện cần thiết
+```

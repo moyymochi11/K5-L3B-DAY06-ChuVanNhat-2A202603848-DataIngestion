@@ -37,7 +37,7 @@
       "filter_total": 4,
       "filter_ratio": "4/4"
     },
-    "ingest_time_seconds": 0.15,
+    "ingest_time_seconds": 0.13,
     "chunk_count": 115,
     "cost_usd": 0.0
   },
